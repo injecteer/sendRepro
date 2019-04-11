@@ -9,7 +9,7 @@ repositories {
 
 mainClassName = 'io.vertx.core.Launcher'
 
-String vertxVersion = '3.7.0'
+String vertxVersion = '3.7.0' 
 
 dependencies {
   compile "io.vertx:vertx-core:$vertxVersion"
