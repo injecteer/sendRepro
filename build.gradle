@@ -1,0 +1,21 @@
+apply plugin:'java'
+apply plugin:'groovy'
+apply plugin:'eclipse'
+apply plugin:'application'
+
+repositories {
+  jcenter()
+}
+
+mainClassName = 'io.vertx.core.Launcher'
+
+String vertxVersion = '3.7.0'
+
+dependencies {
+  compile "io.vertx:vertx-core:$vertxVersion"
+  compile "io.vertx:vertx-lang-groovy:$vertxVersion"
+}
+
+run {
+  args = [ 'run', 'groovy:io.send.reproducer.SendReproducerVerticle', "-launcher-class=$mainClassName" ]
+}
